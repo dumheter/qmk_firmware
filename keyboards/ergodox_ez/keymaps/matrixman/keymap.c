@@ -44,18 +44,18 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_LSFT,    KC_Z,         KC_X,   KC_C,   KC_V,   KC_B,   ALT_T(KC_TAB),
         KC_LCTRL,   KC_LGUI,      KC_LALT,KC_NO,  MO(NAV),
 
-                                           KC_LCTRL,  KC_LALT,
-                                                      MO(NAV),
-                       KC_TAB,    LT(SYMB_L,KC_ESC),  KC_LSFT,
-                  // right hand
-                  KC_BSPC,       KC_6,   KC_7,   KC_8,   KC_9,   KC_0,      KC_BSPC,
-                  CTL_T(KC_SCLN),KC_Y,   KC_U,   KC_I,   KC_O,   KC_P,      KC_BSLS,
-                                 KC_H,   KC_J,   KC_K,   KC_L,   KC_SCLN,   KC_QUOT,
-                  ALT_T(KC_INS), KC_N,   KC_M,   KC_COMM,KC_DOT, KC_SLSH,   KC_RSFT,
-                                         MO(NAV),KC_NO,  KC_RALT,KC_RGUI,   CTL_T(KC_ENT),
-                  KC_RALT,   KC_RCTRL,
-                  MO(NAV),
-                  KC_RSFT, LT(SYMB_R,KC_SPACE), KC_BSPC
+   KC_LCTRL,  KC_LALT,
+   MO(NAV),
+   KC_TAB,    LT(SYMB_L,KC_ESC),  KC_LSFT,
+   // right hand
+   KC_BSPC,       KC_6,   KC_7,   KC_8,   KC_9,   KC_0,      KC_BSPC,
+   CTL_T(KC_SCLN),KC_Y,   KC_U,   KC_I,   KC_O,   KC_P,      KC_BSLS,
+   KC_H,   KC_J,   KC_K,   KC_L,   KC_SCLN,   KC_QUOT,
+   ALT_T(KC_INS), KC_N,   KC_M,   KC_COMM,KC_DOT, KC_SLSH,   KC_RSFT,
+   MO(NAV),KC_NO,  KC_RALT,KC_RGUI,   CTL_T(KC_ENT),
+   KC_RALT,   KC_RCTRL,
+   MO(NAV),
+   KC_RSFT, LT(SYMB_R,KC_SPACE), KC_BSPC
     ),
 /* Keymap 1: Symbol Layer
  *
