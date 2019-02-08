@@ -80,7 +80,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   { KC_MSEL, KC_UP  , KC_MYCM, KC_MAIL, RGB_HUD, RGB_HUI, KC_P7,   KC_UP,   KC_UP,   KC_MINS, _______, _______, KC_PSCR, KC_SLCK, KC_PAUS  },
   { KC_LEFT, KC_DOWN, KC_RGHT, NO_LCBR, NO_RCBR, RGB_SAI, KC_LEFT, KC_LEFT, KC_DOWN, KC_RGHT, _______, RESET,   _______, _______, _______  },
   { KC_VOLD, KC_MUTE, KC_VOLU, NO_LBRC, NO_RBRC, RGB_VAI, KC_P1,   KC_P2,   KC_P3,   KC_PENT, _______, _______, _______, _______, _______  },
-  { _______, _______, MO(_FN), RGB_TOG, RGB_RMOD,RGB_MOD, KC_P0,   _______, KC_PDOT, KC_PENT, KC_PENT,  _______, _______, _______, _______  },
+  { _______, _______, RGB_TOG, MO(_FN), RGB_RMOD,RGB_MOD, KC_P0,   _______, KC_PDOT, KC_PENT, KC_PENT,  _______, _______, _______, _______  },
  },
 
  /* [_FN] = { /\* FUNCTION *\/ */
