@@ -50,47 +50,25 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 /* FUNCTION
  * .--------------------------------------------------------------------------------------------------------------------------------------.
- * | F1     | F2     | F3     | F4     | F5     | F6     | F7     | F8     | F9     | F10    | F11    | F12    | NUMLK  | P/     | P* F12 |
+ * | ESC    | F1     | F2     | F3     | F4     | F5     | F6     | F7     | F8     | F9     | F10    | NUMLK  | P/     | P*     | P-     |
  * |--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------|
- * | SELECT | UP     | MYCOMP | MAIL   | RGB HD | RGB HI | P7     | P8     | P9     | PR SCR |        |        |        | SCR LK | PAUSE  |
+ * | TAB    |        |        |        |        | RGB HD | RGB HI |        | UP     |        | F11    | P7     | P8     | P9     | P+     |
  * |--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------|
- * | LEFT   | DOWN   | RIGHT  | {      | }      | RGB SI | P4     | P5     | P6     | +      |        | RESET  |        |        |        |
+ * | LCTRL  |        |        | {      | }      | RGB SD | RGB SI | LEFT   | DOWN   | RIGHT  | F12    | P4     | P5     | P6     | P+     |
  * |--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------|
- * | VOL-   | MUTE   | VOL+   | [      | ]      | RGB VI | P1     | P2     | P3     | PENT   |        |        |        |        |        |
+ * | LSHF   |        |        | [      | ]      | RGB VD | RGB VI |        | P3     | PENT   | PR SCR | P1     | P2     | P3     | P ENT  |
  * |--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------|
- * |        |        | RGB TG | FN     | RGB RMD| RGB MD | P0     |        | P.     | PENT   | PENT   |        |        |        |        |
- * '--------------------------------------------------------------------------------------------------------------------------------------'
- */
- /* OLD
- * .--------------------------------------------------------------------------------------------------------------------------------------.
- * | F1     | F1     | F2     | F3     | F4     | F5     | F6     | P/     | P*     | F7     | F8     | F9     | F10    | F11    | F12    |
- * |--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------|
- * | TAB    |        | MYCOMP | MAIL   | RGB HD | RGB HI | P7     | P8     | P9     | -      |        |        | PR SCR | SCR LK | PAUSE  |
- * |--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------|
- * | LCTL   |        | NEXT   | STOP   | RGB SD | RGB SI | P4     | P5     | P6     | +      |        | RESET  |        |        |        |
- * |--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------|
- * | LSHIFT |        | VOL+   | APP    | RGB VD | RGB VI | P1     | P2     | P3     | PENT   |        |        |        |        |        |
- * |--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------|
- * |        |        | FN     | RGB TG | RGB RMD| RGB MD | P0     |        | P.     | PENT   | PENT   |        |        |        |        |
+ * |        | LGUI   | LALT   | FN     | RGB TG | RGB RMD| RGB MD |        | AL GR  | INS    | RESET  | P0     | P0     | P,     | P ENT  |
  * '--------------------------------------------------------------------------------------------------------------------------------------'
  */
 
  [_FN] = { /* FUNCTION */
-  { KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,   KC_NLCK, KC_SLSH, KC_ASTR, KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,  KC_F12   },
-  { KC_TAB,  KC_UP  , KC_MYCM, KC_MAIL, RGB_HUD, RGB_HUI, KC_P7,   KC_UP,   KC_UP,   KC_MINS, _______, _______, KC_PSCR, KC_SLCK, KC_PAUS  },
-  { KC_LCTL, KC_DOWN, KC_RGHT, NO_LCBR, NO_RCBR, RGB_SAI, KC_LEFT, KC_LEFT, KC_DOWN, KC_RGHT, _______, RESET,   _______, _______, _______  },
-  { KC_LSFT, _______, KC_VOLU, NO_LBRC, NO_RBRC, RGB_VAI, KC_P1,   KC_P2,   KC_P3,   KC_PENT, _______, _______, _______, _______, _______  },
-  { _______, _______, RGB_TOG, MO(_FN), RGB_RMOD,RGB_MOD, KC_P0,   _______, KC_PDOT, KC_PENT, KC_PENT,  _______, _______, _______, _______  },
+  { KC_ESC,  KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,   KC_NLCK, KC_SLSH, KC_ASTR, KC_MINS  },
+  { KC_TAB,  _______, _______, _______, _______, RGB_HUD, RGB_HUI, _______, KC_UP,   _______, KC_F11,   KC_P7,   KC_P8,   KC_P9,   KC_PLUS  },
+  { KC_LCTL, _______, _______, NO_LCBR, NO_RCBR, RGB_SAD, RGB_SAI, KC_LEFT, KC_DOWN, KC_RGHT, KC_F12,   KC_P4,   KC_P5,   KC_P6,   KC_PLUS  },
+  { KC_LSFT, _______, _______, NO_LBRC, NO_RBRC, RGB_VAD, RGB_VAI, _______, _______, _______, KC_PSCR,  KC_P1,   KC_P2,   KC_P3,   KC_ENT  },
+  { _______, KC_LGUI, KC_LALT, MO(_FN), RGB_TOG, RGB_RMOD,RGB_MOD, _______, SE_ALGR, KC_INS,  RESET,    KC_P0,   KC_P0,   KC_PDOT, KC_PENT  },
  },
-
- /* [_FN] = { /\* FUNCTION *\/ */
- /*     { KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,   KC_NLCK, KC_SLSH, KC_ASTR, KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,  KC_F12   }, */
- /*     { KC_MSEL, KC_CALC, KC_MYCM, KC_MAIL, RGB_HUD, RGB_HUI, KC_P7,   KC_P8,   KC_P9,   KC_MINS, _______, _______, KC_PSCR, KC_SLCK, KC_PAUS  }, */
- /*     { KC_MPRV, KC_MPLY, KC_MNXT, NO_LCBR, NO_RCBR, RGB_SAI, KC_P4,   KC_P5,   KC_P6,   KC_PLUS, _______, RESET,   _______, _______, _______  }, */
- /*     { KC_VOLD, KC_MUTE, KC_VOLU, NO_LBRC, NO_RBRC, RGB_VAI, KC_P1,   KC_P2,   KC_P3,   KC_PENT, _______, _______, _______, _______, _______  }, */
- /*     { _______, _______, MO(_FN),RGB_TOG, RGB_RMOD,RGB_MOD, KC_P0,   _______, KC_PDOT, KC_PENT, KC_PENT, MO(_FN), _______, _______, _______  }, */
- /* }, */
-
 
 /* QWERTY
  * .--------------------------------------------------------------------------------------------------------------------------------------.
