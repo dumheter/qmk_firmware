@@ -72,15 +72,15 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 /* QWERTY
  * .--------------------------------------------------------------------------------------------------------------------------------------.
- * | ESC    | 1      | 2      | 3      | 4      | 5      | -      | `      | =      | 6      | 7      | 8      | 9      | 0      | BACKSP |
+ * | ESC    | 1      | 2      | 3      | 4      | 5      | -      | `      | =      | 6      | 7      | 8      | 9      | 0      | PLY/PS |
  * |--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+-----------------|
- * | TAB    | Q      | W      | E      | R      | T      | [      | \      | ]      | Y      | U      | I      | O      | P      | '      |
+ * | TAB    | Q      | W      | E      | R      | T      | [      | \      | ]      | Y      | U      | I      | O      | P      | VOL +  |
  * |--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+-----------------+--------|
- * | CAP LK | A      | S      | D      | F      | G      | HOME   | DEL    | PG UP  | H      | J      | K      | L      | ;      | ENTER  |
+ * | CAP LK | A      | S      | D      | F      | G      | HOME   | DEL    | PG UP  | H      | J      | K      | L      | ;      | VOL -  |
  * |--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------------------------+--------|
- * | LSHIFT | Z      | X      | C      | V      | B      | END    | UP     | PG DN  | N      | M      | ,      | .      | /      | RSHIFT |
+ * | LSHIFT | Z      | X      | C      | V      | B      | END    | UP     | PG DN  | N      | M      | ,      | HOME   | UP     | END    |
  * |--------+--------+--------+--------+--------+-----------------+--------+--------+--------+--------+-----------------+--------+--------|
- * | LCTRL  | LGUI   | LALT   | FN     | SPACE  | BSPACE | LALT   | ENTER  | ALTGR  | RGUI   | SPACE  |        | RALT   | RGUI   | RCTRL  |
+ * | LCTRL  |        | LALT   | FN     | SPACE  | BSPACE | LALT   | ENTER  | ALTGR  | RGUI   | SPACE  |        | LEFT   | DOWN   | RIGTH  |
  * '--------------------------------------------------------------------------------------------------------------------------------------'
  */
 
@@ -89,7 +89,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   { KC_TAB,  KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,    KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    NO_AA,   NO_QUOT, NO_ACUT, KC_VOLU  },
   { KC_LCTL, KC_A,    KC_S,    KC_D,    KC_F,    KC_G,    KC_H,    KC_J,    KC_K,    KC_L,    NO_OSLH, NO_AE,   KC_BSLS, KC_GRV,  KC_VOLD  },
   { KC_LSFT, KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,    KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH, KC_RSFT, KC_HOME, KC_UP,   KC_END   },
-  { KC_LCTL, KC_LGUI, KC_LALT, MO(_FN), KC_SPC,  KC_BSPC, KC_LALT, KC_ENT,  SE_ALGR, KC_RGUI, KC_RCTL, KC_TRNS, KC_LEFT, KC_DOWN, KC_RGHT  },
+  { KC_LCTL, _______, KC_LALT, MO(_FN), KC_SPC,  KC_BSPC, KC_LALT, KC_ENT,  SE_ALGR, KC_RGUI, KC_RCTL, KC_TRNS, KC_LEFT, KC_DOWN, KC_RGHT  },
  },
 };
 
